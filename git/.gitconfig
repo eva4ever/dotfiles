@@ -1,0 +1,36 @@
+[user]
+	email = hey@evaaaaa.com
+	name = Eva Jenkins
+[core]
+	editor = nvim
+	excludesfile = /Users/eva/.gitignore-global
+	autocrlf = input
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[init]
+	templatedir = /Users/eva/.git-templates
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	rs = !git fetch && git reset --hard origin/master
+[http]
+	postBuffer = 524288000
+[push]
+	default = simple
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
